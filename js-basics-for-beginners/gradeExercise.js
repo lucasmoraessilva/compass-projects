@@ -1,5 +1,9 @@
+function calculateArrayAverage(array) {
+    return array.reduce((acc, value) => acc += value) / array.length;
+}
+
 function calculateGrade(marks) {
-    let average = marks.reduce((acc, value) => acc += value) / marks.length;
+    let average = calculateArrayAverage(marks);
 
     if(average <= 59){
         return 'E';
